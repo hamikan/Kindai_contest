@@ -2,7 +2,7 @@
 docker compose exec domserver cat /opt/domjudge/domserver/etc/restapi.secret
 
 ## adminのパスワード確認
-docker exec -it domserver cat /opt/domjudge/doserver/etc/initial_admin_password.secret
+docker exec -it domserver cat /opt/domjudge/domserver/etc/initial_admin_password.secret
 
 ## dockerの起動
 docker compose up -d (dなかったら垂れ流し)
