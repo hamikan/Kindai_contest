@@ -53,7 +53,7 @@ services:
       - domserver
     environment:
       - DAEMON_ID=0
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=PCnXZnx5eUmf/A3FbP6MDxU1JD2+kVSfz
 
   judgehost-1:
     container_name: judgehost-1
@@ -68,7 +68,7 @@ services:
       - domserver
     environment:
       - DAEMON_ID=1
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=PCnXZnx5eUmf/A3FbP6MDxU1JD2+kVSfz
 
   judgehost-2:
     container_name: judgehost-2
@@ -83,7 +83,7 @@ services:
       - domserver
     environment:
       - DAEMON_ID=2
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=PCnXZnx5eUmf/A3FbP6MDxU1JD2+kVSfz
 
   judgehost-3:
     container_name: judgehost-3
@@ -98,4 +98,4 @@ services:
       - domserver
     environment:
       - DAEMON_ID=3
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=PCnXZnx5eUmf/A3FbP6MDxU1JD2+kVSfz
