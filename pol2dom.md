@@ -105,4 +105,34 @@ https://www.folklore.place/webtools/latex/previewer
 ここまで全部終わったらPackagesのところに行って問題データ諸々をダウンロードできるようにする。画面右上にあるCreate PackageのFullを押せば基本的にはオッケー。（ちなみにこの時点で何か足りてない制約とか、不足していそうな部分があったらある程度はプログラム側が教えてくれる便利な機能がある。）
 ![言語選択](./images/package.png)
 
-## TODO 後日変更しないといけない部分を書く
+## 次にpol2domの使い方
+多分英語で問題を作成したりする分には何も困らないんだけど、日本語にしているせいでファイルをいじらないといけないのがめんどくさい。
+とりあえずpol2domのリポジトリはこれ
+- https://github.com/dario2994/pol2dom
+<br>
+まずはここの最初に載っている
+```
+$ pipx install git+https://github.com/dario2994/pol2dom
+```
+を実行する。これでpythonのパッケージをインストールできる。そしたら次に、このパッケージがインストールされた場所(which p2d)で表示されたところにいく。
+私のところだと
+- /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/p2d
+にあった。
+
+そこのフォルダにいくと、
+- tex_utilities.py
+- sources/document_template.tex
+というファイルがあるはず。これらをこのリポジトリに貼り付けたものと取り替える（もしくはコードの内容をコピペ）。コードの変更はこれでおけ（のはず）。
+
+それが終わったらあとは実行するんだけど、ちょっと準備が必要。
+
+## pol2domのconfig設定
+一応pol2domを実行するときにはコンテスト専用のフォルダを作っておいた方が良い。シンプルに<br>
+Kindai_contest<br>    L config.yaml<br>
+みたいな感じ。(要するにcontestフォルダの中にconfig.yamlがある状態ということです...)
+そのconfig.yamlの中身なんだけど、それもp2d_filesの中に例を貼っているので、それを参考にしてもらえれば多分大丈夫。
+あとは
+```
+p2d contest_directory --polygon --convert --domjudge --pdf
+```
+を実行して終わり！！お疲れ様でした。

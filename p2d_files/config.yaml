@@ -1,0 +1,24 @@
+contest_name: Testing pol2dom
+polygon:
+  key: "polygon-API-key" # ここにPolygonのAPI入力
+  secret: "polygon-secret-API-key" # こっちはsecret。どちらもpolygonのsettingsのの下のNew API keyから取得できる。
+domjudge:
+  server: http://localhost:12345 # DOMjudgeのサーバーURL
+  username: admin # adminじゃないとダメ。公式にも書いている　# Credentials for the DOMjudge instance APIs. Must be an admin user.
+  password: tj1Noeq0Vr56IaaU # いつもログインするときのパスワード
+  contest_id: kindai2025 # ちょっと特殊。先にDOMJudgeでコンテストを作成して、そのときに決めたcontest_idを入力。後からでも確認可能
+problems:
+- name: oop-by-hnd # polygonで登録した問題名
+  label: A # ラベルは問題番号的な感じでいいかな。A,B,C...みたいに
+  color: CornflowerBlue # 色を指定できる。HTMLの色指定。
+  polygon_id: 492231 # これは絶対必要。polygonで登録した問題のIDを指定する。問題作成時の右のところにidが書いているはず。
+  author: Keita Takeuchi # 問題の作成者 書かなくてもいい
+  preparation: Keita Takeuchi # 同様に準備者 書かなくてもいい
+# もしもこれ以降も問題を追加したいのであれば同じように追加していけばいい。
+# - name: another-problem
+#   label: B
+#   color: Pink
+#   override_memory_limit: 1024 
+#   polygon_id: 492231 
+#   author: Keita Takeuchi 
+#   preparation: Keita Takeuchi 
