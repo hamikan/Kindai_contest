@@ -1,5 +1,3 @@
-# docker-compose.yml
-
 version: '3.9'
 
 networks:
@@ -19,11 +17,13 @@ services:
       - MYSQL_USER=domjudge
       - MYSQL_PASSWORD=djpw
       - MYSQL_DATABASE=domjudge
+    # 【学習済】mysqldを削除し、パケットサイズ拡張とバージョン対策オプションを追加済み
     command: --max-allowed-packet=128M --innodb-log-file-size=2G --innodb-snapshot-isolation=OFF
 
   domserver:
     container_name: domserver
     image: domjudge/domserver:latest
+    # Domserverは読み取り専用(:ro)のままでOK
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     networks:
@@ -40,11 +40,13 @@ services:
       - MYSQL_PASSWORD=djpw
       - MYSQL_DATABASE=domjudge
 
+  # Judgehostの設定（4台分）
   judgehost-0:
     container_name: judgehost-0
     image: domjudge/judgehost:latest
     privileged: true
     hostname: judgedaemon-0
+    # 【学習済】書き込み権限(:rw)に変更済み
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
     networks:
@@ -53,7 +55,8 @@ services:
       - domserver
     environment:
       - DAEMON_ID=0
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      # ↓このパスワードは仮置きです。起動後に書き換えます。
+      - JUDGEDAEMON_PASSWORD=I3J5MZyLNfJ68gXMAIPRKHxpXQ77xtic
 
   judgehost-1:
     container_name: judgehost-1
@@ -68,7 +71,7 @@ services:
       - domserver
     environment:
       - DAEMON_ID=1
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=I3J5MZyLNfJ68gXMAIPRKHxpXQ77xtic
 
   judgehost-2:
     container_name: judgehost-2
@@ -83,7 +86,7 @@ services:
       - domserver
     environment:
       - DAEMON_ID=2
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=I3J5MZyLNfJ68gXMAIPRKHxpXQ77xtic
 
   judgehost-3:
     container_name: judgehost-3
@@ -98,4 +101,4 @@ services:
       - domserver
     environment:
       - DAEMON_ID=3
-      - JUDGEDAEMON_PASSWORD=q7i86eEb53GJfvIg6XpAtiJnNqsuThK2
+      - JUDGEDAEMON_PASSWORD=I3J5MZyLNfJ68gXMAIPRKHxpXQ77xtic
