@@ -1,7 +1,7 @@
 export const LINKS = {
-  form: "https://forms.gle/xxxxxxxxxxxxxxxxx", // TODO: GoogleフォームURLに差し替え
-  slack: "#", // TODO: Slack招待の説明ページがあれば。なければ # のままでOK
-  contact: "mailto:you@example.com", // TODO: 学内メールなどに差し替え
+  form: "https://forms.gle/BgwUX6NKLo4hCvRt9",
+  slack: "#",
+  contact: "https://forms.gle/QJydJaJBKPEgDPDi9",
 };
 
 export const CONTEST = {
@@ -14,7 +14,7 @@ export const CONTEST = {
   schedule: {
     date: "未定（1月ごろを予定）",
     timetable: [
-      { label: "コンテスト本編", value: "2〜3時間（予定）" },
+      { label: "コンテスト本編", value: "1〜2時間（予定）" },
       { label: "結果発表・解説", value: "Slack, WEBにて公開予定" },
     ],
   },
@@ -38,9 +38,9 @@ export const CONTEST = {
 
   format: {
     style: "個人戦",
-    timeLimit: "未定（例：2〜3時間を想定）",
-    problems: "未定（複数問を予定）",
-    languages: "未定（C++ / Python など一般的な言語を想定）",
+    timeLimit: "未定（例：1〜2時間を想定）",
+    problems: "未定（７問ほどを予定）",
+    languages: "formsで希望を募り、できる限り対応予定",
     ranking: "正答数と解答時間などをもとに決定予定",
   },
 
@@ -52,11 +52,12 @@ export const CONTEST = {
   },
 
   rules: {
-    who: "参加者は本学の学生に限る",
+    who: "参加者は本学の本学の学生、院生、教員のみに限る",
     code: "競技中のコードは参加者本人が作成したものに限る",
     internetAllowed: [
       "一般的なリファレンスサイト・公式ドキュメントの閲覧",
       "（例）言語公式リファレンス、標準ライブラリの使い方など",
+      "友人との雑談（コードの共有は禁止）",
     ],
     internetForbidden: [
       "AIツールの利用（例：ChatGPT、Copilot、その他コード生成AIなど）",
@@ -76,10 +77,5 @@ export const CONTEST = {
     ],
     period: "受付期間：未定",
     cap: "定員：未定",
-  },
-
-  prize: {
-    award: "上位入賞者を表彰予定",
-    goods: "賞品：未定（決まり次第、Slackや案内ページで告知）",
   },
 };

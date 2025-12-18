@@ -6,7 +6,6 @@ import {
   IconGavel,
   IconMail,
   IconSpark,
-  IconTrophy,
   IconUser,
 } from "../components/Icons";
 
@@ -107,7 +106,7 @@ export const ABOUT_CARDS: AboutCard[] = [
   {
     id: "who",
     title: "対象・参加条件",
-    lead: "本学の学生のみ。初心者〜経験者まで歓迎です。",
+    lead: "本学の学生、院生、教員のみ。初心者〜経験者まで歓迎です。",
     tag: "学内限定",
     icon: <IconUser className="h-5 w-5" />,
     detail: (
@@ -251,24 +250,6 @@ export const ABOUT_CARDS: AboutCard[] = [
         </div>
       </div>
     ),
-  },
-  {
-    id: "prize",
-    title: "表彰・賞品",
-    lead: "上位入賞者を表彰予定。賞品は決まり次第告知します。",
-    tag: "更新あり",
-    icon: <IconTrophy className="h-5 w-5" />,
-    detail: (
-      <div className="space-y-3">
-        <div className="rounded-xl border p-4 text-sm space-y-2 border-slate-200 bg-slate-50 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
-          <p>{CONTEST.prize.award}</p>
-          <p>{CONTEST.prize.goods}</p>
-        </div>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
-          賞品が確定したら、このページ or Slack で追記する運用がスムーズです。
-        </p>
-      </div>
-    ),
-  },
+  }
 ];
 

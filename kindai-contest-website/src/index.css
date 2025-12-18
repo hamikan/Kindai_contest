@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Tailwind v4：dark: を “class トグル” で動かす */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -23,7 +22,6 @@ body {
   @apply bg-slate-950 text-slate-100;
 }
 
-/* 背景のうっすらグリッド（テーマで切替） */
 .bg-grid {
   background-image:
     linear-gradient(to right, rgba(15,23,42,0.06) 1px, transparent 1px),
@@ -38,7 +36,6 @@ body {
     linear-gradient(to bottom, rgba(148,163,184,0.07) 1px, transparent 1px);
 }
 
-/* “スポットライト”ホバー（テーマで光の質を変える） */
 .spotlight {
   --mx: 50%;
   --my: 50%;
@@ -74,12 +71,10 @@ body {
   opacity: 1;
 }
 
-/* モーダル開閉時の body スクロール抑制 */
 body.modal-open {
   overflow: hidden;
 }
 
-/* 影（テーマで調整） */
 .shadow-glow {
   box-shadow:
     0 0 0 1px rgba(15,23,42,.08),
@@ -92,7 +87,6 @@ body.modal-open {
     0 18px 60px rgba(0,0,0,.55);
 }
 
-/* floaty */
 @keyframes floaty {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
@@ -101,7 +95,6 @@ body.modal-open {
   animation: floaty 6s ease-in-out infinite;
 }
 
-/* fadeUp */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0px); }
@@ -110,7 +103,6 @@ body.modal-open {
   animation: fadeUp .6s ease-out both;
 }
 
-/* shimmer（hover:animate-shimmer を生かす） */
 @keyframes shimmer {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
@@ -119,7 +111,6 @@ body.modal-open {
   animation: shimmer 6s linear infinite;
 }
 
-/* motion-reduce の人にやさしく */
 @media (prefers-reduced-motion: reduce) {
   .animate-floaty,
   .animate-fadeUp,

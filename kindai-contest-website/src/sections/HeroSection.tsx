@@ -81,9 +81,8 @@ export function HeroSection() {
               </div>
 
               <pre className="overflow-hidden rounded-xl border p-4 text-xs leading-relaxed border-slate-900/10 bg-slate-950/90 text-slate-100 dark:border-white/10 dark:bg-black/40 dark:text-slate-200">
-{`// 競プロは "思考の筋トレ" みたいなもの
-for (let i = 0; i < N; i++) {
-  // 試して、壊して、直して、速くする
+{`for (let i = 0; i < N; i++) {
+  // 試して、直して、速くする
 }`}
               </pre>
             </div>

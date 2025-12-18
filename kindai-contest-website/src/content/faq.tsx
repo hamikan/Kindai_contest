@@ -18,8 +18,8 @@ export const FAQ_ITEMS: FaqItem[] = [
     a: (
       <>
         現在未定ですが、{" "}
-        <span className="font-semibold text-slate-900 dark:text-slate-100">C++ / Python</span>{" "}
-        など一般的な言語を想定しています。確定次第、このページとSlackで案内予定です。
+        <span className="font-semibold text-slate-900 dark:text-slate-100">formsで希望を募り</span>{" "}
+        確定次第、このページとSlackで案内予定です。
         また、formsで使用したい言語に指定された言語に関してはできる限り使えるようにしたいと考えています。
       </>
     ),
