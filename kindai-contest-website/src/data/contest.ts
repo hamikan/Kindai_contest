@@ -41,7 +41,7 @@ export const CONTEST = {
     timeLimit: "未定（例：1〜2時間を想定）",
     problems: "未定（７問ほどを予定）",
     languages: "formsで希望を募り、できる限り対応予定",
-    ranking: "正答数と解答時間などをもとに決定予定",
+    ranking: "正答数と解答時間をもとに決定",
   },
 
   problems: {

@@ -43,13 +43,6 @@ export function FormatSection() {
             <p>難易度：{CONTEST.problems.difficulty}</p>
             <p>公開：{CONTEST.problems.after}</p>
           </div>
-
-          <div className="mt-4 rounded-xl border p-4 border-slate-900/10 bg-slate-950/90 text-slate-100 dark:border-white/10 dark:bg-black/30 dark:text-slate-200">
-            <p className="text-xs text-slate-300 dark:text-slate-400">ヒント</p>
-            <p className="mt-1 text-sm leading-relaxed">
-              “速く書く”より“正しく考える”が勝ち筋です。 まずは参加して、解説で伸びるやつ。
-            </p>
-          </div>
         </div>
       </div>
     </Section>
