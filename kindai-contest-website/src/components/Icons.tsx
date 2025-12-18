@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = { className?: string };
 
 export function IconSpark({ className }: Props) {

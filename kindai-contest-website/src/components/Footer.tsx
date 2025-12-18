@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTEST, LINKS } from "../data/contest";
 
 export function Footer() {

@@ -1,22 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { NAV_SECTIONS } from "../config/sections";
 import { LINKS } from "../data/contest";
 import { ThemeToggle } from "./ThemeToggle";
 
-type Section = { id: string; label: string };
-
 export function Navbar() {
-  const sections: Section[] = useMemo(
-    () => [
-      { id: "about", label: "概要" },
-      { id: "whenwhere", label: "日時・形式" },
-      { id: "format", label: "競技形式" },
-      { id: "rules", label: "ルール" },
-      { id: "entry", label: "申し込み" },
-      { id: "faq", label: "FAQ" },
-      { id: "contact", label: "問い合わせ" },
-    ],
-    []
-  );
+  const sections = NAV_SECTIONS;
 
   const [active, setActive] = useState<string>("about");
   const [scrolled, setScrolled] = useState(false);
